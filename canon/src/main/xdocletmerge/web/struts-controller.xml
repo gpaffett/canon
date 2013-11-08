@@ -1,0 +1,3 @@
+<controller nocache="true" inputForward="true" maxFileSize="2M" bufferSize="4096" >
+  <set-property property="processorClass" value="org.springframework.web.struts.DelegatingTilesRequestProcessor"/>
+</controller>

@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.citi.prepaid.canon.dao.MSSQLDDAByMemberDAOTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec <<< FAILURE!
+testGet(com.citi.prepaid.canon.dao.MSSQLDDAByMemberDAOTest)  Time elapsed: 0.094 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Cannot connect to DBNo suitable driver found for jdbc:sqlserver://ppamwdcpdsql1b1.nam.nsroot.net;instanceName=ppamwdcpdsql1b1;databaseName=EcountCore
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.citi.prepaid.canon.dao.MSSQLDDAByMemberDAOTest.testGet(MSSQLDDAByMemberDAOTest.java:32)
+

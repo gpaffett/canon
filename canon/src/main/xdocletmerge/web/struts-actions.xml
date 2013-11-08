@@ -1,0 +1,38 @@
+
+<action path="/b2c/management/AdjustmentDisplay"
+        scope="request"
+        validate="false"
+        forward="/WEB-INF/b2c/management/mgmtAdjustment.jsp" />
+
+<!-- ######################## CEMS Action Definitions Start ######################## -->
+<action path="/cems/home"
+        type="com.ecount.cems.actions.CEMSCleanSession"
+        scope="request"
+        validate="false">
+  <forward name="CEMS_CLEAN_SESSION" path=".cems.search" redirect="false"/>
+</action>
+
+<action path="/cems/toCSA"
+        type="com.ecount.cems.actions.CEMSCleanSession"
+        scope="request"
+        validate="false"
+        forward="/WEB-INF/b2c/search.jsp">
+</action>
+
+<action path="/cems/review/addComment"
+        type="com.ecount.cems.actions.CEMSAddComment"
+        name="CEMSBean"
+        attribute="CEMSCommentForm"
+        scope="request"
+        input="CEMS_COMMENT_CREATED"
+        unknown="false"
+        validate="true">
+
+  <forward name="CEMS_COMMENT_CREATED"
+           path=".cems.review.account" redirect="true"/>
+
+  <forward name="CEMS_COMMENT_ERROR"
+           path=".cems.review.account" redirect="true"/>
+</action>
+
+<!-- ######################## CEMS Action Definitions End ######################## -->
